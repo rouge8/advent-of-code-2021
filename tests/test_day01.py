@@ -1,7 +1,6 @@
 import pytest
 
-from advent_of_code_2021.day01 import part1
-from advent_of_code_2021.day01 import part2
+from advent_of_code_2021.day01 import part1, part2
 
 
 @pytest.fixture
