@@ -44,7 +44,22 @@ def part1(data: typing.Iterable[typing.Tuple[Direction, int]]) -> Position:
                 position.depth += line[1]
             case Direction.UP:
                 position.depth -= line[1]
+    return position
 
+
+def part2(data: typing.Iterable[typing.Tuple[Direction, int]]) -> Position:
+    position = Position(0, 0)
+    aim = 0
+
+    for line in data:
+        match line[0]:
+            case Direction.FORWARD:
+                position.horizontal += line[1]
+                position.depth += (aim * line[1])
+            case Direction.DOWN:
+                aim += line[1]
+            case Direction.UP:
+                aim -= line[1]
     return position
 
 
@@ -52,13 +67,13 @@ def part1(data: typing.Iterable[typing.Tuple[Direction, int]]) -> Position:
 @click.argument("data", type=click.File("r"))
 def main(data):
     data = (line.split(" ", 1) for line in data)
-    data = (
-        (Direction.from_str(line[0]), int(line[1]))
-        for line in data
-    )
+    data = [(Direction.from_str(line[0]), int(line[1])) for line in data]
 
-    position = part1(data)
-    print(f"part1: {position} -- {position.product}")
+    position1 = part1(data)
+    print(f"part1: {position1} -- {position1.product}")
+
+    position2 = part2(data)
+    print(f"part2: {position2} -- {position2.product}")
 
 
 if __name__ == "__main__":
