@@ -7,6 +7,7 @@ authors = ["Andy Freeland <andy@andyfreeland.net>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 click = "^8.0.3"
+attrs = "^21.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"

@@ -10,7 +10,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 name = "attrs"
 version = "21.2.0"
 description = "Classes Without Boilerplate"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -121,7 +121,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "53e04698fe7730cefa171ca724adb567dca0eb2ac479858506c5626d0549bd0b"
+content-hash = "d03abc08cb63b34c2bd7e1dfbc7dc5a880d72b578eef2ee0577a01733c37fa15"
 
 [metadata.files]
 atomicwrites = [
