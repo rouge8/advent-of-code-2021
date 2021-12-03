@@ -1,4 +1,7 @@
-from advent_of_code_2021.day02 import Direction, Position, part1, part2
+from advent_of_code_2021.day02 import Direction
+from advent_of_code_2021.day02 import part1
+from advent_of_code_2021.day02 import part2
+from advent_of_code_2021.day02 import Position
 
 DATA = [
     (Direction.FORWARD, 5),

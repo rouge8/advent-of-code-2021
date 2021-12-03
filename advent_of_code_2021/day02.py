@@ -1,5 +1,5 @@
-import typing
 from enum import Enum
+import typing
 
 import attr
 import click
@@ -33,7 +33,7 @@ class Position:
         return self.horizontal * self.depth
 
 
-def part1(data: typing.Iterable[typing.Tuple[Direction, int]]) -> Position:
+def part1(data: typing.Iterable[tuple[Direction, int]]) -> Position:
     position = Position(0, 0)
 
     for line in data:
@@ -47,7 +47,7 @@ def part1(data: typing.Iterable[typing.Tuple[Direction, int]]) -> Position:
     return position
 
 
-def part2(data: typing.Iterable[typing.Tuple[Direction, int]]) -> Position:
+def part2(data: typing.Iterable[tuple[Direction, int]]) -> Position:
     position = Position(0, 0)
     aim = 0
 
@@ -55,7 +55,7 @@ def part2(data: typing.Iterable[typing.Tuple[Direction, int]]) -> Position:
         match line[0]:
             case Direction.FORWARD:
                 position.horizontal += line[1]
-                position.depth += (aim * line[1])
+                position.depth += aim * line[1]
             case Direction.DOWN:
                 aim += line[1]
             case Direction.UP:

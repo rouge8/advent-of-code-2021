@@ -1,6 +1,6 @@
+from collections import defaultdict
 import operator
 import typing
-from collections import defaultdict
 
 import attr
 import click
@@ -71,7 +71,7 @@ def part2(data: typing.Iterable[str]) -> LifeSupportDiagnostic:
             oxygen_generator_rating = oxygen_generator_data[0]
             break
 
-        oxygen_digit_counts = digit_counts((line[i] for line in oxygen_generator_data))
+        oxygen_digit_counts = digit_counts(line[i] for line in oxygen_generator_data)
 
         if oxygen_digit_counts[1] >= oxygen_digit_counts[0]:
             oxygen_generator_rating += "1"
@@ -87,7 +87,7 @@ def part2(data: typing.Iterable[str]) -> LifeSupportDiagnostic:
             co2_scrubber_rating = co2_scrubber_data[0]
             break
 
-        co2_digit_counts = digit_counts((line[i] for line in co2_scrubber_data))
+        co2_digit_counts = digit_counts(line[i] for line in co2_scrubber_data)
 
         if co2_digit_counts[0] <= co2_digit_counts[1]:
             co2_scrubber_rating += "0"
@@ -95,7 +95,8 @@ def part2(data: typing.Iterable[str]) -> LifeSupportDiagnostic:
             co2_scrubber_rating += "1"
 
     return LifeSupportDiagnostic(
-        int(oxygen_generator_rating, 2), int(co2_scrubber_rating, 2)
+        int(oxygen_generator_rating, 2),
+        int(co2_scrubber_rating, 2),
     )
 
 

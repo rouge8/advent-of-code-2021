@@ -1,5 +1,7 @@
-from advent_of_code_2021.day03 import (Diagnostic, LifeSupportDiagnostic,
-                                       part1, part2)
+from advent_of_code_2021.day03 import Diagnostic
+from advent_of_code_2021.day03 import LifeSupportDiagnostic
+from advent_of_code_2021.day03 import part1
+from advent_of_code_2021.day03 import part2
 
 DATA = [
     "00100",
