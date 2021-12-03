@@ -1,4 +1,6 @@
-from advent_of_code_2021.day03 import Diagnostic, part1
+from advent_of_code_2021.day03 import (Diagnostic, LifeSupportDiagnostic,
+                                       part1, part2)
+
 DATA = [
     "00100",
     "11110",
@@ -17,3 +19,7 @@ DATA = [
 
 def test_part1():
     assert part1(DATA) == Diagnostic(22, 9)
+
+
+def test_part2():
+    assert part2(DATA) == LifeSupportDiagnostic(23, 10)
